@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -17,13 +17,19 @@ export default function Home() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.currentTarget
+    const formData = new FormData(form)
+    const searchParams = new URLSearchParams()
+    for (const [key, value] of formData.entries()) {
+      searchParams.append(key, value.toString())
+    }
+
     fetch('/', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(form) as any).toString()
+      body: searchParams.toString()
     })
     .then(() => {
       console.log('Form successfully submitted')
@@ -56,7 +62,7 @@ export default function Home() {
               <div className="text-center py-8 space-y-4">
                 <CheckCircle className="w-16 h-16 text-[#fe9d7a]/70 mx-auto" />
                 <h3 className="text-xl font-semibold text-[#fefefe]">Thank You!</h3>
-                <p className="text-[#d3ecf3]">Your message has been successfully sent. We'll get back to you soon.</p>
+                <p className="text-[#d3ecf3]">Your message has been successfully sent. We&apos;ll get back to you soon.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" className="space-y-6">
