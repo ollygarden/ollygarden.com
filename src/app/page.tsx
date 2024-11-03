@@ -65,7 +65,7 @@ export default function Home() {
                 <p className="text-[#d3ecf3]">Your message has been successfully sent. We&apos;ll get back to you soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} name="contact" method="POST" className="space-y-6">
+              <form data-netlify="true" onSubmit={handleSubmit} name="contact" method="POST" className="space-y-6">
                 <input type="hidden" name="form-name" value="contact" />
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-left block text-[#d3ecf3]">Name</label>
