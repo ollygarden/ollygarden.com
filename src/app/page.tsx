@@ -26,7 +26,7 @@ export default function Home() {
       searchParams.append(key, value.toString())
     }
 
-    fetch('/', {
+    fetch('/__forms.html', {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: searchParams.toString()
