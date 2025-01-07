@@ -44,23 +44,23 @@ export default function Home() {
       <main className="w-full max-w-4xl mx-auto space-y-12 text-center">
         <div className="space-y-6">
           <Image
-            src="/ollygarden.png"
+            src="/ollygarden.webp"
             alt="OllyGarden Logo"
             width={392}
-            height={80}
+            height={179}
             className="mx-auto"
           />
-          <h2 className="text-3xl font-light text-[#fe9d7a] tracking-wide">Efficient Telemetry Pipelines</h2>
+          <h2 className="text-3xl font-light text-[#969921] tracking-wide">Efficient Telemetry Pipelines</h2>
         </div>
 
-        <Card className="w-full max-w-md mx-auto bg-[#2a2e30]/50 backdrop-blur-sm shadow-2xl shadow-black/40 rounded-2xl overflow-hidden border border-[#f36530]/20">
+        <Card className="w-full max-w-md mx-auto bg-[#2a2e30]/50 backdrop-blur-sm shadow-2xl shadow-black/40 rounded-2xl overflow-hidden border border-[#e1e533]/20">
           <CardHeader className="pb-4">
             <CardTitle className="text-2xl font-light text-[#fefefe]">Get in Touch</CardTitle>
           </CardHeader>
           <CardContent>
             {isSubmitted ? (
               <div className="text-center py-8 space-y-4">
-                <CheckCircle className="w-16 h-16 text-[#fe9d7a]/70 mx-auto" />
+                <CheckCircle className="w-16 h-16 text-[#969921]/70 mx-auto" />
                 <h3 className="text-xl font-semibold text-[#fefefe]">Thank You!</h3>
                 <p className="text-[#d3ecf3]">Your message has been successfully sent. We&apos;ll get back to you soon.</p>
               </div>
@@ -76,7 +76,7 @@ export default function Home() {
                     onChange={handleInputChange}
                     placeholder="Your name" 
                     required 
-                    className="bg-[#1a1e20]/50 border-[#f36530]/50 text-[#fefefe] placeholder-[#fe9d7a]/70 focus:ring-[#f36530] focus:border-[#f36530] transition-all duration-300" 
+                    className="bg-[#1a1e20]/50 border-[#e1e533]/50 text-[#fefefe] placeholder-[#969921]/70 focus:ring-[#e1e533] focus:border-[#e1e533] transition-all duration-300" 
                   />
                 </div>
                 <div className="space-y-2">
@@ -89,7 +89,7 @@ export default function Home() {
                     onChange={handleInputChange}
                     placeholder="Your email" 
                     required 
-                    className="bg-[#1a1e20]/50 border-[#f36530]/50 text-[#fefefe] placeholder-[#fe9d7a]/70 focus:ring-[#f36530] focus:border-[#f36530] transition-all duration-300" 
+                    className="bg-[#1a1e20]/50 border-[#e1e533]/50 text-[#fefefe] placeholder-[#969921]/70 focus:ring-[#e1e533] focus:border-[#e1e533] transition-all duration-300" 
                   />
                 </div>
                 <div className="space-y-2">
@@ -101,12 +101,12 @@ export default function Home() {
                     onChange={handleInputChange}
                     placeholder="Your message" 
                     required 
-                    className="bg-[#1a1e20]/50 border-[#f36530]/50 text-[#fefefe] placeholder-[#fe9d7a]/70 focus:ring-[#f36530] focus:border-[#f36530] transition-all duration-300" 
+                    className="bg-[#1a1e20]/50 border-[#e1e533]/50 text-[#fefefe] placeholder-[#969921]/70 focus:ring-[#e1e533] focus:border-[#e1e533] transition-all duration-300" 
                   />
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-[#f36530] hover:bg-[#fe9d7a] text-[#fefefe] transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-[#e1e533] hover:bg-[#969921] text-[#1a1e20] transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Send Message
                 </Button>
@@ -115,8 +115,8 @@ export default function Home() {
           </CardContent>
         </Card>
       </main>
-      <footer className="mt-12 text-center text-sm text-[#d3ecf3]/60">
-        © 2024 Juraci Paixão Kröhling. All rights reserved.
+      <footer className="mt-12 text-center text-sm text-[#e1e533]/60">
+        © 2025 OllyGarden, Inc. All rights reserved.
       </footer>
     </div>
   )
